@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+<layout title="SUMMER_READER STANDARD CATEGORY LAYOUT">
+<message>
+SUMMER_READER STANDARD CATEGORY LAYOUT DESC
+</message>
+</layout>
+<state>
+<name>SUMMER_READER STANDARD CATEGORY LAYOUT</name>
+<description>SUMMER_READER STANDARD CATEGORY LAYOUT DESC</description>
+<url>
+<param name="id" type="category" section="com_summer_reader" default="0" label="Category" description="PARAMCATSELECT" />
+</url>
+<params>
+<param name="show_other_cats" type="radio" default="1" label="Show Other Categories" description="SHOWOTHERCATEGORIES">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+	<param name="show_limit" type="radio" default="1" label="Limit Box" description="PARAMSHOWLIMIT">
+				<option value="0">Hide</option>
+				<option value="1">Show</option>
+			</param>
+				<param name="show_headings" type="radio" default="1" label="Show Table Headings" description="SHOWHEADING">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+		<param name="show_hits_cat" type="radio" default="1" label="Hits in Category" description="TIPIFSETTOSHOWHITSCAT">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+</params>
+</state>
+</metadata>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+<name>Summer_reader</name>
+<author>Danny Buytaert</author>
+<creationDate></creationDate>
+<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+<!-- The version string is recorded in the components table -->
+<version>0.8 beta </version>
+<!-- The description is optional and defaults to the name -->
+<description>A component designed to allow for the management of summer reader participants.</description> 
+<!-- Install Database Section -->
+<install>
+<sql>
+<file driver="mysql" charset="utf8">install.mysql.sql</file>
+</sql>
+</install>
+
+<uninstall>
+<sql>
+<file driver="mysql" charset="utf8">uninstall.mysql.sql</file>
+</sql>
+</uninstall>
+<!-- Custom Install Script to execute -->
+<installfile>install.summer_reader.php</installfile>
+    <!-- Custom Uninstall Script to execute -->
+<uninstallfile>uninstall.summer_reader.php</uninstallfile>
+  
+<!-- Site Main File Copy Section -->
+<files folder="component">
+<filename>summer_reader.php</filename>
+<filename>controller.php</filename>
+<filename>index.html</filename>
+<folder>models</folder>
+<folder>views</folder>
+</files>
+  <!-- Language -->
+  <languages folder="component/language/">
+  <language tag="en-GB">en-GB.com_summer_reader.ini</language>
+  </languages>
+
+<administration>
+<menu>Summer_reader</menu>
+<submenu>
+<menu link="option=com_summer_reader">Summer_reader</menu>
+<menu link="option=com_categories&amp;section=com_summer_reader">Categories</menu>
+</submenu>
+ <!-- Administration Main File Copy Section -->
+  <files>
+<filename>summer_reader.xml</filename>
+</files>
+<files folder="administrator">
+<filename>install.mysql.sql</filename>
+<filename>uninstall.mysql.sql</filename>
+<filename>summer_reader.php</filename>
+<filename>controller.php</filename>
+<filename>config.xml</filename>
+<folder>helpers</folder>
+<folder>models</folder>
+<folder>tables</folder>
+<folder>views</folder>
+<folder>elements</folder>
+</files>
+<!-- Language Administrator-->
+  <languages folder="administrator/language/">
+  <language tag="en-GB">en-GB.com_summer_reader.menu.ini</language>
+  <language tag="en-GB">en-GB.com_summer_reader.ini</language>
+  </languages>
+  </administration>
+</install>
